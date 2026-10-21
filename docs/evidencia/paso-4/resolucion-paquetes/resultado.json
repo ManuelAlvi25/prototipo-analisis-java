@@ -1,0 +1,590 @@
+{
+  "herramienta": {
+    "nombre": "@prototipo/motor",
+    "version": "0.1.0"
+  },
+  "raiz": "C:\\Users\\manol\\Documents\\U SEMESTRE 9\\Tesis\\Prototipo\\tests\\fixtures\\resolucion-paquetes",
+  "archivosAnalizados": 6,
+  "clases": [
+    {
+      "id": "app.Aplicacion",
+      "nombreSimple": "Aplicacion",
+      "paquete": "app",
+      "clase": "class",
+      "archivo": "src/app/Aplicacion.java",
+      "linea": 6,
+      "dependencias": [
+        "dominio.Cliente",
+        "dominio.Pedido",
+        "util.Formatos"
+      ],
+      "dependientes": [
+        "dominio.Pedido"
+      ],
+      "metricas": {
+        "wmc": 2,
+        "numMetodos": 2,
+        "numAtributos": 1,
+        "fanIn": 1,
+        "fanOut": 3,
+        "cbo": 3,
+        "atfd": 0,
+        "tcc": 0,
+        "lcom": {
+          "ck": 1,
+          "lcom4": 2,
+          "hs": 2
+        },
+        "metodos": [
+          {
+            "firma": "ejecutar()",
+            "linea": 9,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          },
+          {
+            "firma": "registrar(Pedido)",
+            "linea": 15,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "app.RepositorioPedidos",
+      "nombreSimple": "RepositorioPedidos",
+      "paquete": "app",
+      "clase": "class",
+      "archivo": "src/app/RepositorioPedidos.java",
+      "linea": 6,
+      "dependencias": [
+        "dominio.Pedido",
+        "dominio.Repositorio"
+      ],
+      "dependientes": [],
+      "metricas": {
+        "wmc": 1,
+        "numMetodos": 1,
+        "numAtributos": 0,
+        "fanIn": 0,
+        "fanOut": 2,
+        "cbo": 2,
+        "atfd": 0,
+        "tcc": null,
+        "lcom": {
+          "ck": 0,
+          "lcom4": 1,
+          "hs": null
+        },
+        "metodos": [
+          {
+            "firma": "buscar(String)",
+            "linea": 7,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "dominio.Cliente",
+      "nombreSimple": "Cliente",
+      "paquete": "dominio",
+      "clase": "class",
+      "archivo": "src/dominio/Cliente.java",
+      "linea": 5,
+      "dependencias": [],
+      "dependientes": [
+        "app.Aplicacion",
+        "dominio.Pedido",
+        "util.Formatos"
+      ],
+      "metricas": {
+        "wmc": 1,
+        "numMetodos": 1,
+        "numAtributos": 1,
+        "fanIn": 3,
+        "fanOut": 0,
+        "cbo": 3,
+        "atfd": 0,
+        "tcc": null,
+        "lcom": {
+          "ck": 0,
+          "lcom4": 1,
+          "hs": null
+        },
+        "metodos": [
+          {
+            "firma": "getNombre()",
+            "linea": 8,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": [
+              "nombre"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "dominio.Pedido",
+      "nombreSimple": "Pedido",
+      "paquete": "dominio",
+      "clase": "class",
+      "archivo": "src/dominio/Pedido.java",
+      "linea": 7,
+      "dependencias": [
+        "app.Aplicacion",
+        "dominio.Cliente"
+      ],
+      "dependientes": [
+        "app.Aplicacion",
+        "app.RepositorioPedidos"
+      ],
+      "metricas": {
+        "wmc": 3,
+        "numMetodos": 2,
+        "numAtributos": 2,
+        "fanIn": 2,
+        "fanOut": 2,
+        "cbo": 3,
+        "atfd": 0,
+        "tcc": 0,
+        "lcom": {
+          "ck": 1,
+          "lcom4": 2,
+          "hs": 2
+        },
+        "metodos": [
+          {
+            "firma": "mayor(T, T)",
+            "linea": 15,
+            "cc": 2,
+            "esConstructor": false,
+            "atributosUsados": []
+          },
+          {
+            "firma": "confirmar()",
+            "linea": 19,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "dominio.Repositorio",
+      "nombreSimple": "Repositorio",
+      "paquete": "dominio",
+      "clase": "interface",
+      "archivo": "src/dominio/Repositorio.java",
+      "linea": 3,
+      "dependencias": [],
+      "dependientes": [
+        "app.RepositorioPedidos"
+      ],
+      "metricas": {
+        "wmc": 1,
+        "numMetodos": 1,
+        "numAtributos": 0,
+        "fanIn": 1,
+        "fanOut": 0,
+        "cbo": 1,
+        "atfd": 0,
+        "tcc": null,
+        "lcom": {
+          "ck": 0,
+          "lcom4": 1,
+          "hs": null
+        },
+        "metodos": [
+          {
+            "firma": "buscar(String)",
+            "linea": 4,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "util.Formatos",
+      "nombreSimple": "Formatos",
+      "paquete": "util",
+      "clase": "class",
+      "archivo": "src/util/Formatos.java",
+      "linea": 3,
+      "dependencias": [
+        "dominio.Cliente"
+      ],
+      "dependientes": [
+        "app.Aplicacion"
+      ],
+      "metricas": {
+        "wmc": 3,
+        "numMetodos": 3,
+        "numAtributos": 0,
+        "fanIn": 1,
+        "fanOut": 1,
+        "cbo": 2,
+        "atfd": 0,
+        "tcc": 0,
+        "lcom": {
+          "ck": 1,
+          "lcom4": 2,
+          "hs": null
+        },
+        "metodos": [
+          {
+            "firma": "Formatos()",
+            "linea": 4,
+            "cc": 1,
+            "esConstructor": true,
+            "atributosUsados": []
+          },
+          {
+            "firma": "formatear(String)",
+            "linea": 7,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          },
+          {
+            "firma": "clienteVacio()",
+            "linea": 11,
+            "cc": 1,
+            "esConstructor": false,
+            "atributosUsados": []
+          }
+        ]
+      }
+    }
+  ],
+  "grafoClases": {
+    "nodos": [
+      "app.Aplicacion",
+      "app.RepositorioPedidos",
+      "dominio.Cliente",
+      "dominio.Pedido",
+      "dominio.Repositorio",
+      "util.Formatos"
+    ],
+    "aristas": [
+      {
+        "origen": "app.Aplicacion",
+        "destino": "dominio.Cliente",
+        "evidencias": [
+          {
+            "uso": "new",
+            "linea": 10,
+            "nombre": "Cliente"
+          }
+        ]
+      },
+      {
+        "origen": "app.Aplicacion",
+        "destino": "dominio.Pedido",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 7,
+            "nombre": "Pedido"
+          },
+          {
+            "uso": "parametro",
+            "linea": 15,
+            "nombre": "Pedido"
+          }
+        ]
+      },
+      {
+        "origen": "app.Aplicacion",
+        "destino": "util.Formatos",
+        "evidencias": [
+          {
+            "uso": "import-estatico",
+            "linea": 4,
+            "nombre": "util.Formatos"
+          }
+        ]
+      },
+      {
+        "origen": "app.RepositorioPedidos",
+        "destino": "dominio.Pedido",
+        "evidencias": [
+          {
+            "uso": "generico",
+            "linea": 6,
+            "nombre": "Pedido"
+          },
+          {
+            "uso": "retorno",
+            "linea": 8,
+            "nombre": "Pedido"
+          }
+        ]
+      },
+      {
+        "origen": "app.RepositorioPedidos",
+        "destino": "dominio.Repositorio",
+        "evidencias": [
+          {
+            "uso": "implements",
+            "linea": 6,
+            "nombre": "Repositorio"
+          }
+        ]
+      },
+      {
+        "origen": "dominio.Pedido",
+        "destino": "app.Aplicacion",
+        "evidencias": [
+          {
+            "uso": "estatico",
+            "linea": 20,
+            "nombre": "Aplicacion"
+          }
+        ]
+      },
+      {
+        "origen": "dominio.Pedido",
+        "destino": "dominio.Cliente",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 9,
+            "nombre": "Cliente"
+          }
+        ]
+      },
+      {
+        "origen": "util.Formatos",
+        "destino": "dominio.Cliente",
+        "evidencias": [
+          {
+            "uso": "retorno",
+            "linea": 11,
+            "nombre": "dominio.Cliente"
+          },
+          {
+            "uso": "new",
+            "linea": 12,
+            "nombre": "dominio.Cliente"
+          }
+        ]
+      }
+    ]
+  },
+  "grafoPaquetes": {
+    "nodos": [
+      "app",
+      "dominio",
+      "util"
+    ],
+    "aristas": [
+      {
+        "origen": "app",
+        "destino": "dominio",
+        "peso": 4
+      },
+      {
+        "origen": "app",
+        "destino": "util",
+        "peso": 1
+      },
+      {
+        "origen": "dominio",
+        "destino": "app",
+        "peso": 1
+      },
+      {
+        "origen": "util",
+        "destino": "dominio",
+        "peso": 1
+      }
+    ]
+  },
+  "ciclos": {
+    "clases": {
+      "componentes": [
+        [
+          "app.Aplicacion",
+          "dominio.Pedido"
+        ]
+      ],
+      "ciclosElementales": [
+        [
+          "app.Aplicacion",
+          "dominio.Pedido"
+        ]
+      ],
+      "truncado": false
+    },
+    "paquetes": {
+      "componentes": [
+        [
+          "app",
+          "dominio",
+          "util"
+        ]
+      ],
+      "ciclosElementales": [
+        [
+          "app",
+          "dominio"
+        ],
+        [
+          "app",
+          "util",
+          "dominio"
+        ]
+      ],
+      "truncado": false
+    }
+  },
+  "configuracion": {
+    "R1": {
+      "activa": true,
+      "tamanoCFC": {
+        "valor": 1,
+        "fuente": "Principio de Dependencias Acíclicas (Martin, 1996, C++ Report 8(10)); Lakos (1996)"
+      }
+    },
+    "R2": {
+      "activa": true,
+      "cc": {
+        "valor": 10,
+        "fuente": "McCabe (1976)"
+      }
+    },
+    "R3": {
+      "activa": true,
+      "wmc": {
+        "valor": 34,
+        "fuente": "Filó, Bigonha y Ferreira (2015), Tabla I, rango Bad/Uncommon"
+      },
+      "lcomHS": {
+        "valor": 0.725,
+        "fuente": "Filó, Bigonha y Ferreira (2015), Tabla I, rango Bad/Uncommon"
+      }
+    },
+    "R3-A": {
+      "activa": true,
+      "wmc": {
+        "valor": 47,
+        "fuente": "Lanza y Marinescu (2006), estrategia God Class, p. 80 (umbrales vía PMD GodClassRule), VERY HIGH"
+      },
+      "atfd": {
+        "valor": 5,
+        "fuente": "Lanza y Marinescu (2006), estrategia God Class, p. 80 (umbrales vía PMD GodClassRule), FEW"
+      },
+      "tcc": {
+        "valor": 0.3333333333333333,
+        "fuente": "Lanza y Marinescu (2006), estrategia God Class, p. 80 (umbrales vía PMD GodClassRule), ONE THIRD"
+      }
+    },
+    "R4": {
+      "activa": true,
+      "fanIn": {
+        "valor": 20,
+        "fuente": "Ferreira et al. (2012), Tabla 3, rango bad"
+      }
+    }
+  },
+  "recomendaciones": [
+    {
+      "regla": "R1",
+      "nombreRegla": "Ciclo de dependencias entre paquetes",
+      "principal": true,
+      "entidad": {
+        "tipo": "ciclo-paquetes",
+        "id": "app, dominio, util",
+        "ubicaciones": [
+          {
+            "archivo": "src/app/Aplicacion.java",
+            "linea": 6
+          },
+          {
+            "archivo": "src/app/RepositorioPedidos.java",
+            "linea": 6
+          },
+          {
+            "archivo": "src/dominio/Pedido.java",
+            "linea": 7
+          },
+          {
+            "archivo": "src/util/Formatos.java",
+            "linea": 3
+          }
+        ]
+      },
+      "problema": "Los paquetes app, dominio, util dependen unos de otros de forma circular: no forman capas y un cambio en cualquiera puede afectar a todos.",
+      "condiciones": [
+        {
+          "metrica": "Paquetes en el componente fuertemente conexo",
+          "valor": 3,
+          "operador": ">",
+          "umbral": 1,
+          "fuente": "Principio de Dependencias Acíclicas (Martin, 1996, C++ Report 8(10)); Lakos (1996)",
+          "cumple": true
+        }
+      ],
+      "refactorizaciones": [
+        "Invertir la dependencia (Principio de Inversión de Dependencias): extraer una interfaz (Extract Interface) con lo que una clase usa de la otra y hacer que dependa de la interfaz.",
+        "Mover la lógica compartida a una clase o paquete nuevo del que dependan ambos (Extract Class / Move Method).",
+        "Si la dependencia solo sirve para navegar a otro objeto (getters), pasar ese objeto como parámetro en lugar de guardarlo."
+      ],
+      "detalles": [
+        "Ciclo: app → dominio → app",
+        "Ciclo: app → util → dominio → app",
+        "Dependencias sugeridas para empezar (las de menor peso, 1): app → util (Aplicacion → Formatos); dominio → app (Pedido → Aplicacion); util → dominio (Formatos → Cliente)."
+      ]
+    },
+    {
+      "regla": "R1",
+      "nombreRegla": "Ciclo de dependencias entre clases",
+      "principal": true,
+      "entidad": {
+        "tipo": "ciclo-clases",
+        "id": "app.Aplicacion, dominio.Pedido",
+        "ubicaciones": [
+          {
+            "archivo": "src/app/Aplicacion.java",
+            "linea": 6
+          },
+          {
+            "archivo": "src/dominio/Pedido.java",
+            "linea": 7
+          }
+        ]
+      },
+      "problema": "Las clases Aplicacion, Pedido dependen unas de otras de forma circular: no se pueden entender, probar ni reutilizar por separado.",
+      "condiciones": [
+        {
+          "metrica": "Clases en el componente fuertemente conexo",
+          "valor": 2,
+          "operador": ">",
+          "umbral": 1,
+          "fuente": "Principio de Dependencias Acíclicas (Martin, 1996, C++ Report 8(10)); Lakos (1996)",
+          "cumple": true
+        }
+      ],
+      "refactorizaciones": [
+        "Invertir la dependencia (Principio de Inversión de Dependencias): extraer una interfaz (Extract Interface) con lo que una clase usa de la otra y hacer que dependa de la interfaz.",
+        "Mover la lógica compartida a una clase o paquete nuevo del que dependan ambos (Extract Class / Move Method).",
+        "Si la dependencia solo sirve para navegar a otro objeto (getters), pasar ese objeto como parámetro en lugar de guardarlo."
+      ],
+      "detalles": [
+        "Ciclo: Aplicacion → Pedido → Aplicacion",
+        "Dependencias sugeridas para empezar (las de menos usos en el código, 1): Pedido → Aplicacion (estatico línea 20)."
+      ]
+    }
+  ],
+  "advertencias": []
+}

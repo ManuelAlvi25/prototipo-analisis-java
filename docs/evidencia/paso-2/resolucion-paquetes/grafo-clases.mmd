@@ -1,0 +1,24 @@
+flowchart LR
+  subgraph app["app"]
+    n0["Aplicacion"]
+    n1["RepositorioPedidos"]
+  end
+  subgraph dominio["dominio"]
+    n2["Cliente"]
+    n3["Pedido"]
+    n4["Repositorio"]
+  end
+  subgraph util["util"]
+    n5["Formatos"]
+  end
+  n0 -->|"new"| n2
+  n0 -->|"campo, parametro"| n3
+  n0 -->|"import-estatico"| n5
+  n1 -->|"generico, retorno"| n3
+  n1 -->|"implements"| n4
+  n3 -->|"estatico"| n0
+  n3 -->|"campo"| n2
+  n5 -->|"retorno, new"| n2
+  classDef ciclo fill:#fde2e2,stroke:#c0392b,stroke-width:2px;
+  class n0,n3 ciclo;
+  linkStyle 1,5 stroke:#c0392b,stroke-width:2px;

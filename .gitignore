@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Proyectos clonados para la evaluación (paso 5): no se versionan
+evaluacion/proyectos/

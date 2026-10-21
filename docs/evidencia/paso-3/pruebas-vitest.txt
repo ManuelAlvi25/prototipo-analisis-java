@@ -1,0 +1,69 @@
+
+ RUN  v5.0.5 C:/Users/manol/Documents/U SEMESTRE 9/Tesis/Prototipo/packages/motor
+
+ ✓ test/ciclos.test.ts > Tarjan: componentes fuertemente conexos > un DAG solo tiene componentes triviales 5ms
+ ✓ test/ciclos.test.ts > Tarjan: componentes fuertemente conexos > separa dos ciclos unidos por un puente 3ms
+ ✓ test/ciclos.test.ts > Tarjan: componentes fuertemente conexos > incluye nodos aislados 0ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > un DAG no tiene ciclos 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > grafo completo de 3 nodos: 5 ciclos 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > grafo completo de 4 nodos: 20 ciclos (6 + 8 + 6) 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > grafo completo de 5 nodos: 84 ciclos 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > respeta el límite y marca la enumeración como truncada 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > ciclos que comparten nodos pero no aristas 1ms
+ ✓ test/metricas-unidad.test.ts > complejidad ciclomática > cuenta case (no default), switch con flechas, &&, ||, lambdas, do, catch y ternario; no clases anónimas 33ms
+ ✓ test/metricas-unidad.test.ts > complejidad ciclomática > métodos abstractos y sin cuerpo valen 1 1ms
+ ✓ test/metricas-unidad.test.ts > atributos usados por cada método > this.campo en el constructor aunque el parámetro tenga el mismo nombre 5ms
+ ✓ test/metricas-unidad.test.ts > atributos usados por cada método > nombre simple de un campo 3ms
+ ✓ test/metricas-unidad.test.ts > atributos usados por cada método > una variable local que oculta al campo no cuenta 5ms
+ ✓ test/metricas-unidad.test.ts > atributos usados por cada método > el campo de otro objeto no es un atributo propio 3ms
+ ✓ test/metricas-unidad.test.ts > atributos usados por cada método > lectura, escritura y this.campo; registra llamadas propias 5ms
+ ✓ test/metricas-unidad.test.ts > accesos a datos ajenos (insumo de ATFD) > detecta accesores sin argumentos y acceso directo, con el tipo declarado del receptor 3ms
+ ✓ test/metricas-unidad.test.ts > fórmulas de cohesión > LCOM-CK = P − Q = 5 − 1 = 4 4ms
+ ✓ test/metricas-unidad.test.ts > fórmulas de cohesión > LCOM4 = 2 componentes ({m1,m2}, {m3,m4}) 4ms
+ ✓ test/metricas-unidad.test.ts > fórmulas de cohesión > LCOM-HS = ((2+1)/2 − 4) / (1 − 4) ≈ 0.8333 2ms
+ ✓ test/metricas-unidad.test.ts > fórmulas de cohesión > TCC = 1/6 0ms
+ ✓ test/metricas-unidad.test.ts > fórmulas de cohesión > LCOM-HS es null sin atributos o con menos de 2 métodos 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > construye el grafo de clases esperado 6ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > import a demanda (dominio.*) 4ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > import static genera arista 2ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > implements con argumento genérico 1ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > acceso estático Tipo.metodo() 1ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > nombre completamente calificado 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > un import sin usar no genera arista 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: ciclos > ciclo entre clases Aplicacion ↔ Pedido 1ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: ciclos > grafo de paquetes agregado con pesos 3ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: ciclos > ciclos entre paquetes 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > encuentra las 5 clases del paquete deuda y ningún tipo externo 6ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > Main: fan-out y fan-in coinciden 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > SistemaMonolitico: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > PedidoService: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > InventarioService: fan-out y fan-in coinciden 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > NotificacionService: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > tiene exactamente 9 aristas 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > cada arista conserva su evidencia (uso y línea) 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > un solo paquete: el grafo de paquetes no tiene aristas 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: problema 1, ciclos de dependencia > un componente fuertemente conexo {PedidoService, InventarioService, NotificacionService} 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: problema 1, ciclos de dependencia > tres ciclos elementales 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: problema 1, ciclos de dependencia > sin ciclos entre paquetes 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > SistemaMonolitico.procesarSolicitud(String, String, int, int) = 27 3ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > SistemaMonolitico.autenticar(String, String) = 6 1ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > InventarioService.reservar(String, int) = 3 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > SistemaMonolitico.exportarAuditoria(String) = 3 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > SistemaMonolitico.generarFactura(String, double, boolean) = 2 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > PedidoService.prepararPedido(String, int) = 2 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > PedidoService.PedidoService(boolean) = 2 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > constructores restantes, getters y Main.main valen 1 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 2, complejidad ciclomática por método > con el umbral de McCabe (CC > 10) solo se señala procesarSolicitud 1ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > SistemaMonolitico: WMC 41, fan-out 3, fan-in 1, CBO 4, LCOM-HS 0.87 1ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > PedidoService: WMC 6, fan-out 1, fan-in 3, CBO 3, LCOM-HS 0 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > InventarioService: WMC 6, fan-out 2, fan-in 3, CBO 3, LCOM-HS 0.83 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > NotificacionService: WMC 5, fan-out 2, fan-in 2, CBO 3, LCOM-HS 1 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > Main: WMC 1, fan-out 1, fan-in 0, CBO 1, LCOM-HS n/a (sin atributos) 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > otras variantes de LCOM no detectan a SistemaMonolitico: CK = 0 y LCOM4 = 1 0ms
+ ✓ test/metricas-sistema-monolitico.test.ts > sistema-monolitico: problema 3, métricas por clase > SistemaMonolitico: TCC = 8/15 y ATFD = 2 (regla A no se cumple) 0ms
+
+ Test Files  5 passed (5)
+      Tests  60 passed (60)
+   Start at  00:44:50
+   Duration  623ms (tests 38%, transform 30%, import 29%, worker 4%)
+

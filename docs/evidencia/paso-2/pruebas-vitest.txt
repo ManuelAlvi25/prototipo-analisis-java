@@ -1,0 +1,40 @@
+
+ RUN  v5.0.5 C:/Users/manol/Documents/U SEMESTRE 9/Tesis/Prototipo/packages/motor
+
+ ✓ test/ciclos.test.ts > Tarjan: componentes fuertemente conexos > un DAG solo tiene componentes triviales 3ms
+ ✓ test/ciclos.test.ts > Tarjan: componentes fuertemente conexos > separa dos ciclos unidos por un puente 2ms
+ ✓ test/ciclos.test.ts > Tarjan: componentes fuertemente conexos > incluye nodos aislados 0ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > un DAG no tiene ciclos 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > grafo completo de 3 nodos: 5 ciclos 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > grafo completo de 4 nodos: 20 ciclos (6 + 8 + 6) 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > grafo completo de 5 nodos: 84 ciclos 1ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > respeta el límite y marca la enumeración como truncada 0ms
+ ✓ test/ciclos.test.ts > Johnson: ciclos elementales > ciclos que comparten nodos pero no aristas 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > construye el grafo de clases esperado 4ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > import a demanda (dominio.*) 1ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > import static genera arista 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > implements con argumento genérico 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > acceso estático Tipo.metodo() 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > nombre completamente calificado 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: resolución de nombres sin tipos > un import sin usar no genera arista 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: ciclos > ciclo entre clases Aplicacion ↔ Pedido 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: ciclos > grafo de paquetes agregado con pesos 0ms
+ ✓ test/resolucion-paquetes.test.ts > resolucion-paquetes: ciclos > ciclos entre paquetes 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > encuentra las 5 clases del paquete deuda y ningún tipo externo 4ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > Main: fan-out y fan-in coinciden 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > SistemaMonolitico: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > PedidoService: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > InventarioService: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > NotificacionService: fan-out y fan-in coinciden 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > tiene exactamente 9 aristas 2ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > cada arista conserva su evidencia (uso y línea) 1ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: grafo de dependencias entre clases > un solo paquete: el grafo de paquetes no tiene aristas 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: problema 1, ciclos de dependencia > un componente fuertemente conexo {PedidoService, InventarioService, NotificacionService} 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: problema 1, ciclos de dependencia > tres ciclos elementales 0ms
+ ✓ test/sistema-monolitico.test.ts > sistema-monolitico: problema 1, ciclos de dependencia > sin ciclos entre paquetes 0ms
+
+ Test Files  3 passed (3)
+      Tests  31 passed (31)
+   Start at  00:30:34
+   Duration  451ms (import 38%, transform 29%, tests 27%, worker 6%)
+

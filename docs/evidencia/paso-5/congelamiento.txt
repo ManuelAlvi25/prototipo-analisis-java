@@ -1,0 +1,5 @@
+Congelamiento del diseño de evaluación
+Archivo: docs/evaluacion.md (versión 1.0)
+Fecha: 2026-10-21T21:18:54Z
+SHA-256: 80fe3745f6528aa81fc78ae5a072812164a1e7b312cf6d37f6a35a8192d10de8
+Estado: ningún análisis de evaluación ejecutado todavía.

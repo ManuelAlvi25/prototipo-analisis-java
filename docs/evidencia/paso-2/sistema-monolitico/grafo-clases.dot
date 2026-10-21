@@ -1,0 +1,23 @@
+digraph dependencias {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#ffffff", fontname="Helvetica"];
+  edge [fontname="Helvetica", fontsize=9];
+  subgraph cluster_0 {
+    label="deuda";
+    style=dashed;
+    "deuda.InventarioService" [label="InventarioService", fillcolor="#fde2e2"];
+    "deuda.Main" [label="Main"];
+    "deuda.NotificacionService" [label="NotificacionService", fillcolor="#fde2e2"];
+    "deuda.PedidoService" [label="PedidoService", fillcolor="#fde2e2"];
+    "deuda.SistemaMonolitico" [label="SistemaMonolitico"];
+  }
+  "deuda.InventarioService" -> "deuda.NotificacionService" [label="campo, new, retorno", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "deuda.InventarioService" -> "deuda.PedidoService" [label="campo, parametro, retorno", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "deuda.Main" -> "deuda.SistemaMonolitico" [label="new, variable"];
+  "deuda.NotificacionService" -> "deuda.InventarioService" [label="campo, parametro, retorno", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "deuda.NotificacionService" -> "deuda.PedidoService" [label="campo, parametro, retorno, new", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "deuda.PedidoService" -> "deuda.InventarioService" [label="campo, new, retorno", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "deuda.SistemaMonolitico" -> "deuda.InventarioService" [label="campo"];
+  "deuda.SistemaMonolitico" -> "deuda.NotificacionService" [label="campo"];
+  "deuda.SistemaMonolitico" -> "deuda.PedidoService" [label="campo, new"];
+}

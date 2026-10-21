@@ -1,0 +1,13 @@
+{
+  "name": "prototipo-analisis-java",
+  "private": true,
+  "description": "Prototipo de tesis: análisis estructural estático de proyectos Java (motor + extensión de VS Code)",
+  "workspaces": [
+    "packages/motor",
+    "packages/extension"
+  ],
+  "scripts": {
+    "build": "npm run build -w @prototipo/motor",
+    "test": "npm test -w @prototipo/motor"
+  }
+}

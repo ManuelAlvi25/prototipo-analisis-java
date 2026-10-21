@@ -1,0 +1,496 @@
+{
+  "herramienta": {
+    "nombre": "@prototipo/motor",
+    "version": "0.1.0"
+  },
+  "raiz": "C:\\Users\\manol\\Documents\\U SEMESTRE 9\\Tesis\\Prototipo\\tests\\fixtures\\sistema-monolitico",
+  "archivosAnalizados": 5,
+  "clases": [
+    {
+      "id": "deuda.InventarioService",
+      "nombreSimple": "InventarioService",
+      "paquete": "deuda",
+      "clase": "class",
+      "archivo": "src/deuda/InventarioService.java",
+      "linea": 3,
+      "dependencias": [
+        "deuda.NotificacionService",
+        "deuda.PedidoService"
+      ],
+      "dependientes": [
+        "deuda.NotificacionService",
+        "deuda.PedidoService",
+        "deuda.SistemaMonolitico"
+      ],
+      "metricas": {
+        "wmc": 6,
+        "numMetodos": 4,
+        "numAtributos": 3,
+        "fanIn": 3,
+        "fanOut": 2,
+        "cbo": 3,
+        "atfd": 0,
+        "tcc": 0.3333,
+        "lcom": {
+          "ck": 1,
+          "lcom4": 2,
+          "hs": 0.8333
+        },
+        "metodos": [
+          {
+            "firma": "InventarioService(PedidoService)",
+            "linea": 8,
+            "cc": 1
+          },
+          {
+            "firma": "reservar(String, int)",
+            "linea": 13,
+            "cc": 3
+          },
+          {
+            "firma": "getPedidoService()",
+            "linea": 26,
+            "cc": 1
+          },
+          {
+            "firma": "getNotificacionService()",
+            "linea": 30,
+            "cc": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "deuda.Main",
+      "nombreSimple": "Main",
+      "paquete": "deuda",
+      "clase": "class",
+      "archivo": "src/deuda/Main.java",
+      "linea": 3,
+      "dependencias": [
+        "deuda.SistemaMonolitico"
+      ],
+      "dependientes": [],
+      "metricas": {
+        "wmc": 1,
+        "numMetodos": 1,
+        "numAtributos": 0,
+        "fanIn": 0,
+        "fanOut": 1,
+        "cbo": 1,
+        "atfd": 0,
+        "tcc": null,
+        "lcom": {
+          "ck": 0,
+          "lcom4": 1,
+          "hs": null
+        },
+        "metodos": [
+          {
+            "firma": "main(String[])",
+            "linea": 4,
+            "cc": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "deuda.NotificacionService",
+      "nombreSimple": "NotificacionService",
+      "paquete": "deuda",
+      "clase": "class",
+      "archivo": "src/deuda/NotificacionService.java",
+      "linea": 3,
+      "dependencias": [
+        "deuda.InventarioService",
+        "deuda.PedidoService"
+      ],
+      "dependientes": [
+        "deuda.InventarioService",
+        "deuda.SistemaMonolitico"
+      ],
+      "metricas": {
+        "wmc": 5,
+        "numMetodos": 5,
+        "numAtributos": 2,
+        "fanIn": 2,
+        "fanOut": 2,
+        "cbo": 3,
+        "atfd": 0,
+        "tcc": 0,
+        "lcom": {
+          "ck": 6,
+          "lcom4": 4,
+          "hs": 1
+        },
+        "metodos": [
+          {
+            "firma": "NotificacionService(InventarioService, PedidoService)",
+            "linea": 7,
+            "cc": 1
+          },
+          {
+            "firma": "notificar(String)",
+            "linea": 12,
+            "cc": 1
+          },
+          {
+            "firma": "crearPedidoAlternativo()",
+            "linea": 16,
+            "cc": 1
+          },
+          {
+            "firma": "getInventarioService()",
+            "linea": 20,
+            "cc": 1
+          },
+          {
+            "firma": "getPedidoService()",
+            "linea": 24,
+            "cc": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "deuda.PedidoService",
+      "nombreSimple": "PedidoService",
+      "paquete": "deuda",
+      "clase": "class",
+      "archivo": "src/deuda/PedidoService.java",
+      "linea": 3,
+      "dependencias": [
+        "deuda.InventarioService"
+      ],
+      "dependientes": [
+        "deuda.InventarioService",
+        "deuda.NotificacionService",
+        "deuda.SistemaMonolitico"
+      ],
+      "metricas": {
+        "wmc": 6,
+        "numMetodos": 4,
+        "numAtributos": 1,
+        "fanIn": 3,
+        "fanOut": 1,
+        "cbo": 3,
+        "atfd": 0,
+        "tcc": 1,
+        "lcom": {
+          "ck": 0,
+          "lcom4": 1,
+          "hs": 0
+        },
+        "metodos": [
+          {
+            "firma": "PedidoService()",
+            "linea": 6,
+            "cc": 1
+          },
+          {
+            "firma": "PedidoService(boolean)",
+            "linea": 10,
+            "cc": 2
+          },
+          {
+            "firma": "prepararPedido(String, int)",
+            "linea": 16,
+            "cc": 2
+          },
+          {
+            "firma": "getInventarioService()",
+            "linea": 23,
+            "cc": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "deuda.SistemaMonolitico",
+      "nombreSimple": "SistemaMonolitico",
+      "paquete": "deuda",
+      "clase": "class",
+      "archivo": "src/deuda/SistemaMonolitico.java",
+      "linea": 6,
+      "dependencias": [
+        "deuda.InventarioService",
+        "deuda.NotificacionService",
+        "deuda.PedidoService"
+      ],
+      "dependientes": [
+        "deuda.Main"
+      ],
+      "metricas": {
+        "wmc": 41,
+        "numMetodos": 7,
+        "numAtributos": 6,
+        "fanIn": 1,
+        "fanOut": 3,
+        "cbo": 4,
+        "atfd": 2,
+        "tcc": 0.5333,
+        "lcom": {
+          "ck": 0,
+          "lcom4": 1,
+          "hs": 0.8667
+        },
+        "metodos": [
+          {
+            "firma": "SistemaMonolitico()",
+            "linea": 14,
+            "cc": 1
+          },
+          {
+            "firma": "procesarSolicitud(String, String, int, int)",
+            "linea": 20,
+            "cc": 27
+          },
+          {
+            "firma": "autenticar(String, String)",
+            "linea": 88,
+            "cc": 6
+          },
+          {
+            "firma": "generarFactura(String, double, boolean)",
+            "linea": 99,
+            "cc": 2
+          },
+          {
+            "firma": "exportarAuditoria(String)",
+            "linea": 105,
+            "cc": 3
+          },
+          {
+            "firma": "getCaja()",
+            "linea": 115,
+            "cc": 1
+          },
+          {
+            "firma": "getUsuarioActual()",
+            "linea": 119,
+            "cc": 1
+          }
+        ]
+      }
+    }
+  ],
+  "grafoClases": {
+    "nodos": [
+      "deuda.InventarioService",
+      "deuda.Main",
+      "deuda.NotificacionService",
+      "deuda.PedidoService",
+      "deuda.SistemaMonolitico"
+    ],
+    "aristas": [
+      {
+        "origen": "deuda.InventarioService",
+        "destino": "deuda.NotificacionService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 5,
+            "nombre": "NotificacionService"
+          },
+          {
+            "uso": "new",
+            "linea": 10,
+            "nombre": "NotificacionService"
+          },
+          {
+            "uso": "retorno",
+            "linea": 30,
+            "nombre": "NotificacionService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.InventarioService",
+        "destino": "deuda.PedidoService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 4,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "parametro",
+            "linea": 8,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "retorno",
+            "linea": 26,
+            "nombre": "PedidoService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.Main",
+        "destino": "deuda.SistemaMonolitico",
+        "evidencias": [
+          {
+            "uso": "new",
+            "linea": 5,
+            "nombre": "SistemaMonolitico"
+          },
+          {
+            "uso": "variable",
+            "linea": 5,
+            "nombre": "SistemaMonolitico"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.NotificacionService",
+        "destino": "deuda.InventarioService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 4,
+            "nombre": "InventarioService"
+          },
+          {
+            "uso": "parametro",
+            "linea": 7,
+            "nombre": "InventarioService"
+          },
+          {
+            "uso": "retorno",
+            "linea": 20,
+            "nombre": "InventarioService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.NotificacionService",
+        "destino": "deuda.PedidoService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 5,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "parametro",
+            "linea": 7,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "retorno",
+            "linea": 16,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "new",
+            "linea": 17,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "retorno",
+            "linea": 24,
+            "nombre": "PedidoService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.PedidoService",
+        "destino": "deuda.InventarioService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 4,
+            "nombre": "InventarioService"
+          },
+          {
+            "uso": "new",
+            "linea": 12,
+            "nombre": "InventarioService"
+          },
+          {
+            "uso": "retorno",
+            "linea": 23,
+            "nombre": "InventarioService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.SistemaMonolitico",
+        "destino": "deuda.InventarioService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 8,
+            "nombre": "InventarioService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.SistemaMonolitico",
+        "destino": "deuda.NotificacionService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 9,
+            "nombre": "NotificacionService"
+          }
+        ]
+      },
+      {
+        "origen": "deuda.SistemaMonolitico",
+        "destino": "deuda.PedidoService",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 7,
+            "nombre": "PedidoService"
+          },
+          {
+            "uso": "new",
+            "linea": 15,
+            "nombre": "PedidoService"
+          }
+        ]
+      }
+    ]
+  },
+  "grafoPaquetes": {
+    "nodos": [
+      "deuda"
+    ],
+    "aristas": []
+  },
+  "ciclos": {
+    "clases": {
+      "componentes": [
+        [
+          "deuda.InventarioService",
+          "deuda.NotificacionService",
+          "deuda.PedidoService"
+        ]
+      ],
+      "ciclosElementales": [
+        [
+          "deuda.InventarioService",
+          "deuda.NotificacionService"
+        ],
+        [
+          "deuda.InventarioService",
+          "deuda.PedidoService"
+        ],
+        [
+          "deuda.InventarioService",
+          "deuda.NotificacionService",
+          "deuda.PedidoService"
+        ]
+      ],
+      "truncado": false
+    },
+    "paquetes": {
+      "componentes": [],
+      "ciclosElementales": [],
+      "truncado": false
+    }
+  },
+  "advertencias": []
+}

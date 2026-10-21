@@ -1,0 +1,31 @@
+digraph dependencias {
+  rankdir=LR;
+  node [shape=box, style="rounded,filled", fillcolor="#ffffff", fontname="Helvetica"];
+  edge [fontname="Helvetica", fontsize=9];
+  subgraph cluster_0 {
+    label="app";
+    style=dashed;
+    "app.Aplicacion" [label="Aplicacion", fillcolor="#fde2e2"];
+    "app.RepositorioPedidos" [label="RepositorioPedidos"];
+  }
+  subgraph cluster_1 {
+    label="dominio";
+    style=dashed;
+    "dominio.Cliente" [label="Cliente"];
+    "dominio.Pedido" [label="Pedido", fillcolor="#fde2e2"];
+    "dominio.Repositorio" [label="Repositorio"];
+  }
+  subgraph cluster_2 {
+    label="util";
+    style=dashed;
+    "util.Formatos" [label="Formatos"];
+  }
+  "app.Aplicacion" -> "dominio.Cliente" [label="new"];
+  "app.Aplicacion" -> "dominio.Pedido" [label="campo, parametro", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "app.Aplicacion" -> "util.Formatos" [label="import-estatico"];
+  "app.RepositorioPedidos" -> "dominio.Pedido" [label="generico, retorno"];
+  "app.RepositorioPedidos" -> "dominio.Repositorio" [label="implements"];
+  "dominio.Pedido" -> "app.Aplicacion" [label="estatico", color="#c0392b", fontcolor="#c0392b", penwidth=2];
+  "dominio.Pedido" -> "dominio.Cliente" [label="campo"];
+  "util.Formatos" -> "dominio.Cliente" [label="retorno, new"];
+}

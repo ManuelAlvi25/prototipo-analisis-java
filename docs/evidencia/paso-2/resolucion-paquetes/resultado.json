@@ -1,0 +1,278 @@
+{
+  "herramienta": {
+    "nombre": "@prototipo/motor",
+    "version": "0.1.0"
+  },
+  "raiz": "C:\\Users\\manol\\Documents\\U SEMESTRE 9\\Tesis\\Prototipo\\tests\\fixtures\\resolucion-paquetes",
+  "archivosAnalizados": 6,
+  "clases": [
+    {
+      "id": "app.Aplicacion",
+      "nombreSimple": "Aplicacion",
+      "paquete": "app",
+      "clase": "class",
+      "archivo": "src/app/Aplicacion.java",
+      "linea": 6,
+      "dependencias": [
+        "dominio.Cliente",
+        "dominio.Pedido",
+        "util.Formatos"
+      ],
+      "dependientes": [
+        "dominio.Pedido"
+      ]
+    },
+    {
+      "id": "app.RepositorioPedidos",
+      "nombreSimple": "RepositorioPedidos",
+      "paquete": "app",
+      "clase": "class",
+      "archivo": "src/app/RepositorioPedidos.java",
+      "linea": 6,
+      "dependencias": [
+        "dominio.Pedido",
+        "dominio.Repositorio"
+      ],
+      "dependientes": []
+    },
+    {
+      "id": "dominio.Cliente",
+      "nombreSimple": "Cliente",
+      "paquete": "dominio",
+      "clase": "class",
+      "archivo": "src/dominio/Cliente.java",
+      "linea": 5,
+      "dependencias": [],
+      "dependientes": [
+        "app.Aplicacion",
+        "dominio.Pedido",
+        "util.Formatos"
+      ]
+    },
+    {
+      "id": "dominio.Pedido",
+      "nombreSimple": "Pedido",
+      "paquete": "dominio",
+      "clase": "class",
+      "archivo": "src/dominio/Pedido.java",
+      "linea": 7,
+      "dependencias": [
+        "app.Aplicacion",
+        "dominio.Cliente"
+      ],
+      "dependientes": [
+        "app.Aplicacion",
+        "app.RepositorioPedidos"
+      ]
+    },
+    {
+      "id": "dominio.Repositorio",
+      "nombreSimple": "Repositorio",
+      "paquete": "dominio",
+      "clase": "interface",
+      "archivo": "src/dominio/Repositorio.java",
+      "linea": 3,
+      "dependencias": [],
+      "dependientes": [
+        "app.RepositorioPedidos"
+      ]
+    },
+    {
+      "id": "util.Formatos",
+      "nombreSimple": "Formatos",
+      "paquete": "util",
+      "clase": "class",
+      "archivo": "src/util/Formatos.java",
+      "linea": 3,
+      "dependencias": [
+        "dominio.Cliente"
+      ],
+      "dependientes": [
+        "app.Aplicacion"
+      ]
+    }
+  ],
+  "grafoClases": {
+    "nodos": [
+      "app.Aplicacion",
+      "app.RepositorioPedidos",
+      "dominio.Cliente",
+      "dominio.Pedido",
+      "dominio.Repositorio",
+      "util.Formatos"
+    ],
+    "aristas": [
+      {
+        "origen": "app.Aplicacion",
+        "destino": "dominio.Cliente",
+        "evidencias": [
+          {
+            "uso": "new",
+            "linea": 10,
+            "nombre": "Cliente"
+          }
+        ]
+      },
+      {
+        "origen": "app.Aplicacion",
+        "destino": "dominio.Pedido",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 7,
+            "nombre": "Pedido"
+          },
+          {
+            "uso": "parametro",
+            "linea": 15,
+            "nombre": "Pedido"
+          }
+        ]
+      },
+      {
+        "origen": "app.Aplicacion",
+        "destino": "util.Formatos",
+        "evidencias": [
+          {
+            "uso": "import-estatico",
+            "linea": 4,
+            "nombre": "util.Formatos"
+          }
+        ]
+      },
+      {
+        "origen": "app.RepositorioPedidos",
+        "destino": "dominio.Pedido",
+        "evidencias": [
+          {
+            "uso": "generico",
+            "linea": 6,
+            "nombre": "Pedido"
+          },
+          {
+            "uso": "retorno",
+            "linea": 8,
+            "nombre": "Pedido"
+          }
+        ]
+      },
+      {
+        "origen": "app.RepositorioPedidos",
+        "destino": "dominio.Repositorio",
+        "evidencias": [
+          {
+            "uso": "implements",
+            "linea": 6,
+            "nombre": "Repositorio"
+          }
+        ]
+      },
+      {
+        "origen": "dominio.Pedido",
+        "destino": "app.Aplicacion",
+        "evidencias": [
+          {
+            "uso": "estatico",
+            "linea": 20,
+            "nombre": "Aplicacion"
+          }
+        ]
+      },
+      {
+        "origen": "dominio.Pedido",
+        "destino": "dominio.Cliente",
+        "evidencias": [
+          {
+            "uso": "campo",
+            "linea": 9,
+            "nombre": "Cliente"
+          }
+        ]
+      },
+      {
+        "origen": "util.Formatos",
+        "destino": "dominio.Cliente",
+        "evidencias": [
+          {
+            "uso": "retorno",
+            "linea": 11,
+            "nombre": "dominio.Cliente"
+          },
+          {
+            "uso": "new",
+            "linea": 12,
+            "nombre": "dominio.Cliente"
+          }
+        ]
+      }
+    ]
+  },
+  "grafoPaquetes": {
+    "nodos": [
+      "app",
+      "dominio",
+      "util"
+    ],
+    "aristas": [
+      {
+        "origen": "app",
+        "destino": "dominio",
+        "peso": 4
+      },
+      {
+        "origen": "app",
+        "destino": "util",
+        "peso": 1
+      },
+      {
+        "origen": "dominio",
+        "destino": "app",
+        "peso": 1
+      },
+      {
+        "origen": "util",
+        "destino": "dominio",
+        "peso": 1
+      }
+    ]
+  },
+  "ciclos": {
+    "clases": {
+      "componentes": [
+        [
+          "app.Aplicacion",
+          "dominio.Pedido"
+        ]
+      ],
+      "ciclosElementales": [
+        [
+          "app.Aplicacion",
+          "dominio.Pedido"
+        ]
+      ],
+      "truncado": false
+    },
+    "paquetes": {
+      "componentes": [
+        [
+          "app",
+          "dominio",
+          "util"
+        ]
+      ],
+      "ciclosElementales": [
+        [
+          "app",
+          "dominio"
+        ],
+        [
+          "app",
+          "util",
+          "dominio"
+        ]
+      ],
+      "truncado": false
+    }
+  },
+  "advertencias": []
+}

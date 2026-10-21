@@ -1,0 +1,9 @@
+{
+  "name": "@prototipo/extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Capa delgada de VS Code que muestra los resultados del motor. Se implementa en el paso 5.",
+  "dependencies": {
+    "@prototipo/motor": "0.1.0"
+  }
+}
